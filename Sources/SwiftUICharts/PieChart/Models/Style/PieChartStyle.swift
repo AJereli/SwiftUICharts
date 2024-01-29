@@ -24,8 +24,11 @@ public struct PieChartStyle: CTPieChartStyle {
     public var infoBoxBackgroundColour: Color
     public var infoBoxBorderColour: Color
     public var infoBoxBorderStyle: StrokeStyle
-    
+
     public var globalAnimation: Animation
+
+    public var selectedShadowColour: Color
+
     
     /// Model for controlling the overall aesthetic of the chart.
     /// - Parameters:
@@ -55,7 +58,8 @@ public struct PieChartStyle: CTPieChartStyle {
         infoBoxBackgroundColour: Color = Color.systemsBackground,
         infoBoxBorderColour: Color = Color.clear,
         infoBoxBorderStyle: StrokeStyle = StrokeStyle(lineWidth: 0),
-        globalAnimation: Animation = Animation.linear(duration: 1)
+        globalAnimation: Animation = Animation.linear(duration: 1),
+        selectedShadowColour: Color = .primary
     ) {
         self.infoBoxPlacement = infoBoxPlacement
         self.infoBoxContentAlignment = infoBoxContentAlignment
@@ -70,5 +74,7 @@ public struct PieChartStyle: CTPieChartStyle {
         self.infoBoxBorderColour = infoBoxBorderColour
         self.infoBoxBorderStyle = infoBoxBorderStyle
         self.globalAnimation = globalAnimation
+        
+        self.selectedShadowColour = selectedShadowColour
     }
 }
